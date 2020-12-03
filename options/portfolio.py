@@ -52,6 +52,7 @@ class Option:
 
         if fig_ax is None:
             fig.legend(labels)
+            fig.close()
             return display(fig)
 
 
@@ -120,4 +121,5 @@ class Portfolio(Option):
 
         if fig_ax is None:
             fig.legend(labels)
+            fig.close()
             return display(fig)
