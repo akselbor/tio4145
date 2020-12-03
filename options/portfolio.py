@@ -86,6 +86,21 @@ class Short(Option):
     def strike_price(self):
         return self.option.strike_price
 
+class Stock(Option):
+    def __init__(self, price = 0):
+        self.price = price
+
+    def value_at(self, stock_price: int):
+        return stock_price
+
+    def profit_at(self, stock_price: int):
+        return self.value_at(stock_price) - self.price
+
+    def range_of_interest(self):
+        return (0, 0)
+
+    def __repr__(self):
+        return 'Stock'
 
 class Portfolio(Option):
     def __init__(self, *options: List[Option]):
