@@ -52,7 +52,7 @@ class Option:
 
         if fig_ax is None:
             fig.legend(labels)
-            display(fix)
+            display(fig)
             return ''
             return display(fig)
 
