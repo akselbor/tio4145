@@ -20,7 +20,7 @@ def binomial_pricing(stock_price, strike_price, option_type, risk_free_rate, up,
     dot = graphviz.Digraph()
     dot.graph_attr['rankdir'] = 'LR'
     _binomial_pricing(stock_price, strike_price, option_type,
-                      risk_free_rate, up, down, {}, dot, periods=1, current_period=0)
+                      risk_free_rate, up, down, {}, dot, periods=periods, current_period=0)
     return dot
 
 
@@ -102,5 +102,5 @@ def risk_neutral_probabilities(stock_price, strike_price, option_type, risk_free
     dot = graphviz.Digraph()
     dot.graph_attr['rankdir'] = 'LR'
     _risk_neutral_probabilities(stock_price, strike_price, option_type,
-                                risk_free_rate, up, down, {}, dot, periods=1, current_period=0)
+                                risk_free_rate, up, down, {}, dot, periods=periods, current_period=0)
     return dot
