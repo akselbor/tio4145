@@ -97,7 +97,7 @@ class Stock(Option):
         return self.value_at(stock_price) - self.price
 
     def range_of_interest(self):
-        return (0, 0)
+        return (self.price, self.price)
 
     def __repr__(self):
         return 'Stock'
