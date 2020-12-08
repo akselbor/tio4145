@@ -108,7 +108,7 @@ class Bond(Option):
         self.price = price
 
     def value_at(self, stock_price: int):
-        return self.value
+        return self.value + 0 * stock_price
 
     def profit_at(self, stock_price: int):
         return self.value_at(stock_price) - self.price
