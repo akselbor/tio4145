@@ -102,6 +102,25 @@ class Stock(Option):
     def __repr__(self):
         return 'Stock'
 
+class Bond(Option):
+    def __init__(self, value = 0, price = 0):
+        self.value = value
+        self.price = price
+
+    def value_at(self, stock_price: int):
+        return self.value
+
+    def profit_at(self, stock_price: int):
+        return self.value_at(stock_price) - self.price
+
+    def range_of_interest(self):
+        return (self.price, self.price)
+
+    def __repr__(self):
+        return 'Bond'
+
+
+
 class Portfolio(Option):
     def __init__(self, *options: List[Option]):
         self.options = options
